@@ -11,13 +11,17 @@
 // })
 
 // Stimulus 
-// connect the controller 
-// (add data-controller="controller-name" in the html element)
+// 1 connect the controller 
+// (add data-controller="controller-name" in the html element that contains all the interested elements, all targets and actions)
 
-// select elements 
-// on the HTML element add data-controller-name-target="nameOfTarget"
-// in stimulus controller add static targets = ["button"]
-// call the element this.nameOfTargetTarget
+// 2 select elements: data-targets
+// on the HTML element you want to target add: data-controller-name-target="nameOfElement"
+// in stimulus controller add: static targets = ["nameOfElement"]
+// call the element: this.nameOfElementTarget
 
-// Listen to an event: Data action
-// data-action="click->disable-button#disable"
+// 3 Listen to an event: Data action
+// HTML, add action to the element: data-action="click->disable-button#disable"
+// in stimulus controller: define the action 
+// disable() {
+  // 4 change the DOM here
+// }
